@@ -18,50 +18,31 @@ class ViewController: UIViewController {
         countDice()
     }
     
+    fileprivate func showdice() {
+        for i in 0..<countNumber{
+            diceImageViews[i].isHidden = false
+        }
+        for j in countNumber...5{
+            diceImageViews[j].isHidden = true
+        }
+    }
+    
     func countDice(){
         switch countNumber {
         case 1:
-            diceImageViews[0].isHidden = false
-            diceImageViews[1].isHidden = true
-            diceImageViews[2].isHidden = true
-            diceImageViews[3].isHidden = true
-            diceImageViews[4].isHidden = true
-            diceImageViews[5].isHidden = true
+            showdice()
         case 2:
-            diceImageViews[0].isHidden = false
-            diceImageViews[1].isHidden = false
-            diceImageViews[2].isHidden = true
-            diceImageViews[3].isHidden = true
-            diceImageViews[4].isHidden = true
-            diceImageViews[5].isHidden = true
+            showdice()
         case 3:
-            diceImageViews[0].isHidden = false
-            diceImageViews[1].isHidden = false
-            diceImageViews[2].isHidden = false
-            diceImageViews[3].isHidden = true
-            diceImageViews[4].isHidden = true
-            diceImageViews[5].isHidden = true
+            showdice()
         case 4:
-            diceImageViews[0].isHidden = false
-            diceImageViews[1].isHidden = false
-            diceImageViews[2].isHidden = false
-            diceImageViews[3].isHidden = false
-            diceImageViews[4].isHidden = true
-            diceImageViews[5].isHidden = true
+            showdice()
         case 5:
-            diceImageViews[0].isHidden = false
-            diceImageViews[1].isHidden = false
-            diceImageViews[2].isHidden = false
-            diceImageViews[3].isHidden = false
-            diceImageViews[4].isHidden = false
-            diceImageViews[5].isHidden = true
+            showdice()
         default:
-            diceImageViews[0].isHidden = false
-            diceImageViews[1].isHidden = false
-            diceImageViews[2].isHidden = false
-            diceImageViews[3].isHidden = false
-            diceImageViews[4].isHidden = false
-            diceImageViews[5].isHidden = false
+            for image in diceImageViews {
+                image.isHidden = false
+            }
         }
     }
 
